@@ -1,9 +1,9 @@
-// function replaceName(){
-//     var Username = prompt("Please enter your name", "");
-//     document.getElementById ("username").innerHTML = Username;
-// }
+function replaceName(){
+    var Username = prompt("Please enter your name", "");
+    document.getElementById ("username").innerHTML = Username;
+}
 
-// replaceName();
+replaceName();
 
 // function scrollToSection(sectionId) {
 //     var section = document.getElementById(sectionId);

@@ -82,10 +82,10 @@ const imageSlider = document.getElementById('slider')
 
 var i = 0
 const images = [
-    "img/gambar.jpg",
-    "img/gambar1.jpg",
-    "img/gambar2.jpg",
-    "img/gambar3.jpg",
+    "https://source.unsplash.com/random/1080x600?landscape&sig=2",
+    "https://source.unsplash.com/random/1080x600?landscape&sig=3",
+    "https://source.unsplash.com/random/1080x600?landscape&sig=4",
+    "https://source.unsplash.com/random/1080x600?landscape&sig=5",
 ]
 
 function bannerSlide(){

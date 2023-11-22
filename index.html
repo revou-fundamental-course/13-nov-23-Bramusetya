@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Travel</title>
+    <link rel="stylesheet"  href="css/style.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Home -->
+    <section id="home">
+        <header> 
+            <div class="navigation-header">
+                <a href="index.html">
+                    <img src="img/Logo.png"></a>
+                    <div class="mobile-menu-icon" onclick="toggleMenu()">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <nav class="navigation">
+                        <a href="#home" onclick="scrollToSection('home')">Home</a>
+                        <a href="#packages" onclick="scrollToSection('packages')">Our Package</a>
+                        <a href="#contact" onclick="scrollToSection('contact')">Call Us</a>
+                    </nav>
+            </div>
+                <section class="hero">
+                    <div class="slideshow">
+                        <img 
+                            class="img-slideshow" 
+                            src="https://source.unsplash.com/random/1080x400?landscape&sig=1"
+                            />
+                        <img 
+                            class="img-slideshow" 
+                            src="https://source.unsplash.com/random/1080x400?landscape&sig=2"
+                            />
+                        <img 
+                            class="img-slideshow" 
+                            src="https://source.unsplash.com/random/1080x400?landscape&sig=3"
+                            />
+                    </div>
+                    <div class="hero-content">
+                        <section class="title-header">
+                            <h1>Hi <span id="username"></span>, Welcome to Family Travel!</h1>
+                            <h3>Your Trusted Travel Agent's</h3>
+                            <h4>"Your happiness is our happiness"</h4>
+                        </section>
+                    </div>
+                </section>
+        </header>
+
+        <main class="main-container">
+            <div class="review">
+                <img src="img/Gambar1.jpg" id="slider">
+                <h4>"Liburan jadi menyenangkan bersama Family Travel"</h4>
+                <div class="stars">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                </div>
+                <div class="profile-container">
+                    <i class="far fa-user-circle profile-icon"></i>
+                    <div class="details">
+                        <h5 class="name">Florence Hughes</h5><br>
+                        <h6 class="age">Ibu Rumah tangga, 28</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-message">
+                <h3>Contact Us</h3>
+                <h5>Tim markering akan menghubungi anda jika data telah kami terima</h5>
+                <form name="message" onsubmit="return validateForm()">
+                    <label for="name">Name</label>
+                    <input required type="text" id="name" name="name-input" placeholder="Your name.."><br>
+                    <p id="nameError" class="error-message"></p>
+
+                    <label for="email">Email</label>
+                    <input required type="text" id="email" name="email-input" placeholder="example@gmail.com"><br>
+                    <p id="emailError" class="error-message"></p>
+
+                    <label for="option">What are you interested in?</label>
+                        <select required id="option" name="option-select">
+                            <option selected>Select Option </option>
+                            <option value="Yogyakarta">Yogyakarta</option>
+                            <option value="Surakarta">Surakarta</option>
+                            <option value="Makassar">Makassar</option>
+                            <option value="Bandung">Bandung</option>
+                            <option value="Surabaya">Surabaya</option>
+                            <option value="Malang">Malang</option>
+                        </select><br>
+                        <p id="optionError" class="error-message"></p>
+
+                    <button id="send" type="button" class="primary-button" onclick="submitForm()">Send</button>
+                </form>
+            </div>
+
+        </main>
+        <div class="benefit-container">
+            <h2>Benefit</h2>
+            <p>Terdapat beberapa manfaat menggunakan Family Travel, antara lain:</p>
+            <p><span class="number-icon">1</span>Tidak Perlu Repot Mempersiapkan Perencanaan Liburan</p>
+            <p><span class="number-icon">2</span>Sering Mengadakan Diskon / Penawaran Harga</p>
+            <p><span class="number-icon">3</span>Pelayanan yang Baik dan Minim Resiko </p>
+        </div>
+    </section>
+
+    <!-- Package -->
+        <section id="packages">
+            <div class="paket">
+                <h1>Our packages</h1>
+                <p>Terserdia beberapa pilihan paket perjalanan yang telah kami sediakan.</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-item">
+                    <i><span class="far fa-lightbulb"></span>Yogyakarta</i>
+                    <p class="deskripsi">Travel dan wisata di Yogyakarta.<br>
+                         kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+        
+                <div class="content-item">
+                    <i><span class="far fa-lightbulb"></span>Surakarta</i>
+                    <p class="deskripsi">Travel dan wisata di Surakarta.<br>
+                         kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+        
+                <div class="content-item">
+                    <i><span class="far fa-lightbulb"></span>Makassar</i>
+                    <p class="deskripsi">Travel dan wisata di Makassar.<br>
+                         kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+
+                <div class="content-item">
+                    <i><span class="far fa-star"></span>Bandung</i>
+                    <p class="deskripsi">Travel dan wisata di Bandung.<br>
+                        kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+
+                <div class="content-item">
+                    <i><span class="far fa-star"></span>Surabaya</i>
+                    <p class="deskripsi">Travel dan wisata di Surabaya.<br>
+                         kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+        
+                <div class="content-item">
+                    <i><span class="far fa-star"></span>Malang</i>
+                    <p class="deskripsi">Travel dan wisata di Malang.<br>
+                         kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+            </div>
+
+    <!-- Contact -->
+        <section id="contact">
+            <div class="contact-us">
+                <h2>Contact Us</h2>
+                <p>Apakah Anda membutuhkan bantuan atau memiliki pertanyaan?<br>
+                    Jangan ragu untuk menghubungi tim kami kapan saja.<br>
+                    Tim dukungan pelanggan kami siap membantu.</p>
+                <a href="https://api.whatsapp.com/send?phone=+6281367175908&text=Hallo Admin!%0ASaya ingin paket perjalanan.%0AApakah bisa?" target="_blank">
+                    <button class="contact-button">Contact Us</button></a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <img src="img/Logo.png" alt="logo" width="150" height="60">
+            <div class="footer-content">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <p class="copyright">All Rights Reserved © 2023 Family Travel.</p>
+        </footer>
+        <script src="js/script.js"></script>
+</body>
+</html>
